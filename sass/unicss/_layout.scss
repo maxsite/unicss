@@ -1,0 +1,22 @@
+// (c) UniCSS, http://unicss.maxsite.com.ua/
+
+// layout
+
+.layout-center {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: $layout_max_width;
+}
+
+// wrap
+.layout-center-wrap {
+	width: 100%;
+	
+	> .layout-wrap {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: $layout_max_width;
+	}
+}

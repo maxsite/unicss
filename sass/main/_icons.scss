@@ -1,0 +1,33 @@
+// Icons
+
+.t-icon        { font-size: $icon_size; }
+.t-icon-small  { font-size: $icon_size_small; }
+.t-icon-medium { font-size: $icon_size_medium; }
+.t-icon-large  { font-size: $icon_size_large; }
+
+.icon0:before {
+	margin-right: 0 !important;
+}
+
+.icon-circle,
+.icon-square,
+.icon-rounded
+{
+	line-height: 2; 
+	width: 2em;
+	height: 2em;
+	display: inline-block;
+	text-align: center;
+	
+	&:before {
+		margin: 0 !important;
+	}
+}
+
+.icon-circle {
+	border-radius: 50%;
+}
+
+.icon-rounded {
+	border-radius: 5px;
+}
