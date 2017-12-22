@@ -2,21 +2,15 @@
 
 // layout
 
-.layout-center {
+.layout-center-wrap {
+	width: 100%;
+}
+
+.layout-center,
+.layout-center-wrap > .layout-wrap
+{
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	max-width: $layout_max_width;
-}
-
-// wrap
-.layout-center-wrap {
-	width: 100%;
-	
-	> .layout-wrap {
-		width: 100%;
-		margin-right: auto;
-		margin-left: auto;
-		max-width: $layout_max_width;
-	}
 }

@@ -24,6 +24,11 @@
 .bg-transparent { background-color: transparent !important; }
 .t-transparent { color: transparent !important; }
 
+.bg-size-auto    { background-size: auto; }
+.bg-size-cover   { background-size: cover; }
+.bg-size-contain { background-size: contain; }
+
+
 @mixin colors_state($name, $color) {
 	
 	.t-#{$name} {
