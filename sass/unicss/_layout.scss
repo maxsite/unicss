@@ -14,3 +14,15 @@
 	margin-left: auto;
 	max-width: $layout_max_width;
 }
+
+// for layout_max_width_step_list
+@each $postfix, $m in $layout_max_width_step_list {
+	.layout-center-#{$postfix}, 
+	.layout-center-wrap-#{$postfix} > .layout-wrap
+	{
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: $m; 
+	}
+}
