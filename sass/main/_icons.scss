@@ -31,3 +31,23 @@
 .icon-rounded {
 	border-radius: 5px;
 }
+
+// base class for icons FontAwesome
+.icon-fa-normal {
+	font-family: FontAwesome;
+	display: inline-block;
+	font-size: inherit;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	margin-right: $icon_right_margin;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="i-"]:before, 
+[class*=" i-"]:before 
+{
+	@extend .icon-fa-normal;
+}

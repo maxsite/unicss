@@ -5,6 +5,7 @@
 
 // main variables
 @import 'main/variables';
+@import 'main/fontawesome_variables';
 
 // UniCSS
 // @import 'unicss/0-version_unicss';
@@ -27,10 +28,8 @@
 @import 'unicss/other';
 
 @import 'main/extension-unicss';
-
 @import 'main/base';
 @import 'main/blocks';
-@import 'main/fontawesome';
 @import 'main/forms';
 @import 'main/icons';
 @import 'main/images';
@@ -41,4 +40,3 @@
 
 @import 'main/my-template';
 @import 'main/print';
-
