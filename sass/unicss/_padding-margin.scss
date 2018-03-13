@@ -3,20 +3,27 @@
 // margins
 
 @mixin set_pm($type, $val, $prefix, $postfix: "") {
-	.#{$prefix}#{$val}#{$postfix}    { #{$type}: #{$val}px !important; }
-	.#{$prefix}#{$val}-t#{$postfix}  { #{$type}-top: #{$val}px !important; }
-	.#{$prefix}#{$val}-r#{$postfix}  { #{$type}-right: #{$val}px !important; }
-	.#{$prefix}#{$val}-b#{$postfix}  { #{$type}-bottom: #{$val}px !important; }
-	.#{$prefix}#{$val}-l#{$postfix}  { #{$type}-left: #{$val}px !important; }
+	
+	$px: px;
+	
+	@if $val == 0 { $px: ''; }
+	
+	$important: if($padding_margin_important, '!important', '');
+	
+	.#{$prefix}#{$val}#{$postfix}    { #{$type}: #{$val}#{$px}#{$important}; }
+	.#{$prefix}#{$val}-t#{$postfix}  { #{$type}-top: #{$val}#{$px}#{$important}; }
+	.#{$prefix}#{$val}-r#{$postfix}  { #{$type}-right: #{$val}#{$px}#{$important}; }
+	.#{$prefix}#{$val}-b#{$postfix}  { #{$type}-bottom: #{$val}#{$px}#{$important}; }
+	.#{$prefix}#{$val}-l#{$postfix}  { #{$type}-left: #{$val}#{$px}#{$important}; }
 	
 	.#{$prefix}#{$val}-tb#{$postfix} { 
-		#{$type}-top: #{$val}px !important; 
-		#{$type}-bottom: #{$val}px !important; 
+		#{$type}-top: #{$val}#{$px}#{$important}; 
+		#{$type}-bottom: #{$val}#{$px}#{$important}; 
 	}
 	
 	.#{$prefix}#{$val}-rl#{$postfix} { 
-		#{$type}-right: #{$val}px !important; 
-		#{$type}-left: #{$val}px !important; 
+		#{$type}-right: #{$val}#{$px}#{$important}; 
+		#{$type}-left: #{$val}#{$px}#{$important}; 
 	}
 }
 

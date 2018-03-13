@@ -40,12 +40,12 @@
 .t-mono    { font-family: PT Mono, Monaco, Menlo, Consolas, Courier New, monospace; }
 
 /* deprecated — use .lh100 .lh150em etc _other.scss*/
-.t-lh100   { line-height: 1; }
-.t-lh150   { line-height: 1.5; }
-.t-lh200   { line-height: 2; }
-.t-lh100em { line-height: 1em; }
-.t-lh150em { line-height: 1.5em; }
-.t-lh200em { line-height: 2em; }
+// .t-lh100   { line-height: 1; }
+// .t-lh150   { line-height: 1.5; }
+// .t-lh200   { line-height: 2; }
+// .t-lh100em { line-height: 1em; }
+// .t-lh150em { line-height: 1.5em; }
+// .t-lh200em { line-height: 2em; }
 
 .t-clip {
     white-space: nowrap;
