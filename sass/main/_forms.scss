@@ -1,3 +1,5 @@
+// (c) UniCSS, http://unicss.maxsite.com.ua/
+
 // Form elements
 
 label { cursor: pointer; }
@@ -9,13 +11,12 @@ input[type="checkbox"] {
 	cursor: pointer;
 }
 
-$input_placeholder: #888888;
 input, 
 textarea {
-	&:-moz-placeholder { color: $input_placeholder; }
-	&::-moz-placeholder { color: $input_placeholder; }
-	&:-ms-input-placeholder { color: $input_placeholder; }
-	&::-webkit-input-placeholder { color: $input_placeholder; }
+	&:-moz-placeholder { color: $placeholder_color; }
+	&::-moz-placeholder { color: $placeholder_color; }
+	&:-ms-input-placeholder { color: $placeholder_color; }
+	&::-webkit-input-placeholder { color: $placeholder_color; }
 	font: inherit;
 }
 
@@ -42,18 +43,19 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
 
+	// base color for elements form
+	$form_base_color: #9bcbef;
+
 	padding: 4px 6px;
 	border: 1px solid #eeeeee;
 	transition: border-color ease .2s;
-	border-radius: 3px;
-	
-	$base_color: lighten($blue, 30%);
-	
+	border-radius: 3px;	
+
 	&:focus {
-		border: 1px solid $base_color;
+		border: 1px solid $form_base_color;
 		background: $white;
 		outline: 0;
-		box-shadow: 0 0 3px 0 rgba(red($base_color), green($base_color), blue($base_color), 0.5);
+		box-shadow: 0 0 3px 0 rgba(red($form_base_color), green($form_base_color), blue($form_base_color), 0.5);
 	}
 
 	&:disabled {
@@ -64,10 +66,10 @@ input[type="color"] {
 	
 	&:not(:focus):hover {
 		border-color: #ddd;
-		&:-moz-placeholder { color: darken($input_placeholder, 20%); }
-		&::-moz-placeholder { color: darken($input_placeholder, 20%); }
-		&:-ms-input-placeholder { color: darken($input_placeholder, 20%); }
-		&::-webkit-input-placeholder { color: darken($input_placeholder, 20%); }
+		&:-moz-placeholder { color: darken($placeholder_color, 20%); }
+		&::-moz-placeholder { color: darken($placeholder_color, 20%); }
+		&:-ms-input-placeholder { color: darken($placeholder_color, 20%); }
+		&::-webkit-input-placeholder { color: darken($placeholder_color, 20%); }
 	}
 	
 	&.light {
@@ -80,7 +82,7 @@ input[type="color"] {
 		&:focus {
 			border: none;
 			padding-bottom: 7px;
-			border-bottom: 2px solid $base_color;
+			border-bottom: 2px solid $form_base_color;
 			box-shadow: none;
 		}
 	}
@@ -95,14 +97,6 @@ button {
 	font: inherit;
 }
 
-$button_bg_color: $blue;
-$button_text_color: #f0f0f0;
-$button_hover_bg_color: darken($button_bg_color, 5%);
-$button_hover_text_color: white;
-$button_disabled_bg_color: $g_gray300;
-$button_disabled_text_color: $g_gray500;
-$button_padding: 10px 20px;
-$button_radius: 3px;
 
 .button {
 	display: inline-block;

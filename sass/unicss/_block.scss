@@ -20,11 +20,25 @@
 	margin-right: auto; 
 }
 
-.b-hide { display: none; } 
+.b-hide     { display: none; } 
 .b-hide-imp { display: none !important; } 
 
-.b-inline { display: inline-block; }
-.b-block  { display: block; }
-.b-flex  { display: flex; }
+.b-inline, 
+.b-inline-block { 
+	display: inline-block; 
+}
 
-.b-clear { clear: both; }
+.b-block  { display: block; }
+.b-flex   { display: flex; }
+.b-grid   { display: grid; }
+
+.b-clear  { clear: both; }
+
+.va-baseline    { vertical-align: baseline; }
+.va-top         { vertical-align: top; }
+.va-middle      { vertical-align: middle; }
+.va-bottom      { vertical-align: bottom; }
+.va-text-top    { vertical-align: text-top; }
+.va-text-bottom { vertical-align: text-bottom; }
+.va-sub 		{ vertical-align: sub; }
+.va-super 		{ vertical-align: super; }

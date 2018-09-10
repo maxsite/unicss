@@ -3,7 +3,6 @@
 // Text
 
 // reset text to normal
-// .normal, // deprecated!
 .t-reset {
 	font-weight: normal;
 	font-style: normal;
@@ -12,6 +11,13 @@
 	padding: 0;
 	line-height: 1em;
 }
+
+.lh100   { line-height: 1; }
+.lh150   { line-height: 1.5; }
+.lh200   { line-height: 2; }
+.lh100em { line-height: 1em; }
+.lh150em { line-height: 1.5em; }
+.lh200em { line-height: 2em; }
 
 .bold        { font-weight: bold; }
 .bold-normal { font-weight: normal; }
@@ -22,6 +28,8 @@
 .capitalize  { text-transform: capitalize; }
 .upper       { text-transform: uppercase; }
 .lower       { text-transform: lowercase; }
+
+.cursor-pointer { cursor: pointer; }
 
 .t-right   { text-align: right; }
 .t-left    { text-align: left; }
@@ -38,14 +46,6 @@
 .t-arial   { font-family: Arial, Helvetica, Verdana, sans-serif; }
 .t-verdana { font-family: Verdana, Arial, Helvetica, sans-serif; }
 .t-mono    { font-family: PT Mono, Monaco, Menlo, Consolas, Courier New, monospace; }
-
-/* deprecated — use .lh100 .lh150em etc _other.scss*/
-// .t-lh100   { line-height: 1; }
-// .t-lh150   { line-height: 1.5; }
-// .t-lh200   { line-height: 2; }
-// .t-lh100em { line-height: 1em; }
-// .t-lh150em { line-height: 1.5em; }
-// .t-lh200em { line-height: 2em; }
 
 .t-clip {
     white-space: nowrap;
@@ -99,4 +99,3 @@
 		}
 	}
 }
-

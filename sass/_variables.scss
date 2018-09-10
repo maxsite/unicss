@@ -1,15 +1,15 @@
 // (c) UniCSS, http://unicss.maxsite.com.ua/
 
-// Main variables
+// UniCSS variables
 
 // max layout
 $layout_max_width: 992px;
 
 // max layout for other size: .layout-center-small .layout-center-wrap-tablet
 $layout_max_width_step_list: (
-	"small":   480px,
-	"phone":   640px,
-	"tablet":  768px
+	"small":  480px,
+	"phone":  640px,
+	"tablet": 768px
 );
 
 // width max-width (.w70px .w300px-max .w50px-min)
@@ -18,14 +18,14 @@ $width_list_px: 10, 16, 24, 30, 32, 48, 50, 64, 70, 100, 200, 250, 300, 320, 400
 // width % .w50 .w30-tablet
 $width_list_percent: 0, 100, 1, 2, 5, 10, 15, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 85, 90;
 
-// heights PX height and min-height (.h32px .h100px-min .h24px-max)
-$height_list: 10, 16, 20, 24, 30, 32, 48, 50, 64, 70, 100, 200, 300, 400, 500;
+// heights PX height and min-height (.h20px .h100px-min .h30px-max)
+$height_list: 10, 16, 20, 30, 40, 50, 60, 70, 100, 200, 300, 400, 500;
 
-// padding px (.pad5)
-$padding_list: 0, 5, 6, 7, 10, 15, 20, 25, 30, 40, 50;
+// padding px (.pad5 .pad50-t .pad10-rl .pad20-tb)
+$padding_list: 0, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 
-// margin px (.mar5)
-$margin_list: 0, 5, 6, 7, 10, 15, 20, 25, 30, 40, 50;
+// margin px (.mar5 mar50-t .mar10-rl .mar20-tb)
+$margin_list: 0, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 
 // set padding and margin as !important
 $padding_margin_important: true;
@@ -46,36 +46,46 @@ $text_em: .8, .9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2
 $text_px: 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 24, 26, 28, 30, 32, 48, 64;
 
 // border-width (.bor1, .bor2) 
-$border_list: 1, 2, 3, 4, 5, 6, 7, 8, 9;
+$border_list: 1, 2, 3, 4, 5;
 
 // borders type line (.bor-solid  .bor-dotted-rl) (solid, dotted, dashed, double)
 $border_type_list: solid, dotted, dashed, double;
 
-// position (.pos-top10, .pos10-r, .pos10-b, .pos10px-l)
+// .bordered
+$bordered: #cccccc 1px solid;
+
+// position PX (.pos-top10, .pos10-r, .pos10-b, .pos10-l)
 $position_list: 0, 10;
 
-// .rounded10 {border-radius: 10px;}
+// border-radius PX .rounded10 {border-radius: 10px;}
 $rounded_list: 0, 5, 10;
 
-// icons
-$icon_size: 32px;
-$icon_size_small: 16px;
-$icon_size_medium: 24px;
-$icon_size_large: 48px;
+// icons right margin
 $icon_right_margin: 7px;
 
-// @media
+// default button .buttton and <button>
+$button_bg_color: #2185D0;
+$button_text_color: #f0f0f0;
+$button_hover_bg_color: darken($button_bg_color, 5%);
+$button_hover_text_color: #ffffff;
+$button_disabled_bg_color: $g_gray300;
+$button_disabled_text_color: $g_gray500;
+$button_padding: 10px 20px;
+$button_radius: 3px;
 
+// placeholder color
+$placeholder_color: #888888;
+
+
+// @media
 //      480     640      768      1024       1100
 // SMALL   PHONE   TABLET   MEDIUM    DESKTOP    LARGE
-
 $SCREEN_SMALL:   "(max-width: 480px)";
 $SCREEN_PHONE:   "(max-width: 640px)";
 $SCREEN_TABLET:  "(max-width: 768px)";
 $SCREEN_MEDIUM:  "(max-width: 1024px)";
 $SCREEN_DESKTOP: "(max-width: 1100px)";
 $SCREEN_LARGE:   "(min-width: 1101px)";
-
 
 // Screen @media: From large to small !!!
 // .w30-tablet
@@ -88,11 +98,11 @@ $screen_media_width_step_list: (
 	// "small":   $SCREEN_SMALL
 );
 
-// .flex-wrap-tablet
+// .flex-wrap-tablet .flex-wrap-phone
 $screen_media_flex_step_list: (
-	"tablet": $SCREEN_TABLET, 
-	"tablet-phone": $SCREEN_TABLET, 
-	"phone":  $SCREEN_PHONE,
+	"tablet": 		$SCREEN_TABLET, 
+	// "tablet-phone": $SCREEN_TABLET, 
+	"phone":  		$SCREEN_PHONE,
 );
 
 // .t-right-phone . t120-tablet
@@ -102,24 +112,24 @@ $screen_media_text_step_list: (
 );
 
 
-// colors (colors-gmd.scss) 
+// colors (colors-gmd.scss and colors-gmd.html) 
 $colorLink: 		#002DB3;
 $colorLinkHover: 	#D90000;
 
-$color1: 	$g_pink500;
-$colorA1: 	$g_pinkA200;
+$color1: 	#536dfe;
+$colorA1: 	#304ffe;
 
-$color2: 	$g_indigo500;
-$colorA2: 	$g_indigoA200;
+$color2: 	#ec407a;
+$colorA2: 	#c2185b;
 
-$color3: 	$g_light_green500;
-$colorA3: 	$g_light_greenA200;
+$color3: 	#00897b;
+$colorA3: 	#004d40;
 
-$color4: 	$g_orange500;
-$colorA4: 	$g_orangeA100;
+$color4: 	#7cb342;
+$colorA4: 	#33691e;
 
-$color5: 	$g_teal500;
-$colorA5: 	$g_tealA400;
+$color5: 	#546e7a;
+$colorA5: 	#37474f;
 
 $white:    	#FFFFFF;
 $black:    	#000000;
@@ -135,17 +145,17 @@ $purple: 	#A333C8;
 $pink: 		#E03997;
 $brown: 	#A5673F;
 
-$gray:       $g_gray;
-$gray50:     $g_gray50;
-$gray100:    $g_gray100;
-$gray200:    $g_gray200;
-$gray300:    $g_gray300;
-$gray400:    $g_gray400;
-$gray500:    $g_gray500;
-$gray600:    $g_gray600;
-$gray700:    $g_gray700;
-$gray800:    $g_gray800;
-$gray900:    $g_gray900;
+$gray:      $g_gray;
+$gray50:    $g_gray50;
+$gray100:   $g_gray100;
+$gray200:   $g_gray200;
+$gray300:   $g_gray300;
+$gray400:   $g_gray400;
+$gray500:   $g_gray500;
+$gray600:   $g_gray600;
+$gray700:   $g_gray700;
+$gray800:   $g_gray800;
+$gray900:   $g_gray900;
 
 // .t-red | .bg-red | .hover-t-red:hover 
 // .hover-bg-red:hover 

@@ -1,42 +1,43 @@
 // (c) UniCSS, http://unicss.maxsite.com.ua/
 
-// google colors
-@import 'main/colors-gmd';
+// variables for colors google design (colors-gmd.html)
+@import 'unicss/colors-gmd';
 
-// main variables
-@import 'main/variables';
-@import 'main/fontawesome_variables';
+// UniCSS variables
+@import 'variables';
 
-// UniCSS
-// @import 'unicss/0-version_unicss';
 @import 'unicss/normalize';
 @import 'unicss/resets';
 @import 'unicss/block';
 @import 'unicss/border';
 @import 'unicss/flex';
-@import 'unicss/gradients';
 @import 'unicss/height';
+@import 'unicss/icons';
 @import 'unicss/layout';
 @import 'unicss/links';
 @import 'unicss/padding-margin';
 @import 'unicss/position';
 @import 'unicss/rounded';
-@import 'unicss/shadow';
 @import 'unicss/text';
 @import 'unicss/visible';
 @import 'unicss/width';
-@import 'unicss/other';
 
-@import 'main/extension-unicss';
+@import 'fonts/fontawesome';
+
+@import 'main/fonts';
 @import 'main/base';
 @import 'main/blocks';
 @import 'main/forms';
-@import 'main/icons';
+@import 'main/gradients';
 @import 'main/images';
 @import 'main/lines';
 @import 'main/lists';
+@import 'main/shadow';
 @import 'main/table';
-@import 'unicss/colors';
+@import 'main/transition';
+@import 'main/other';
 
-@import 'main/my-template';
+@import 'unicss/colors'; // ! for maximum priority
+
 @import 'main/print';
+@import 'main/my-template';

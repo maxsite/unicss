@@ -1,5 +1,8 @@
 // (c) UniCSS, http://unicss.maxsite.com.ua/
 
+.visibility-hidden  { visibility: hidden; }
+.visibility-visible { visibility: visible; }
+
 @media #{$SCREEN_DESKTOP} {
 	.visible-desktop, 
 	.visible-desktop-tablet { 

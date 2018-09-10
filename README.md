@@ -1,11 +1,19 @@
-UniCSS 
+UniCSS (Universal Atomic CSS) 
 ===========
 
-Universal Atomic CSS framework
+Atomic CSS — это методика CSS-верстки, основанная на использовании атомарных утилитарных классов
 
-http://unicss.maxsite.com.ua/
 
-UniCSS this a simple and effective method of naming css-classes
+В Atomic СSS (почти) каждому СSS свойству соответствует свой отдельный класс, что делает его универсальным и простым для использования. С Atomic CSS можно сразу использовать готовые CSS-классы, вместо того, чтобы их создавать каждый раз снова и снова.
 
-Framework atomic level (Atomic CSS framework, Atomic Design). Uses Sass. Normalize.css. Adaptive design. Flex (full support). Good typography. Icons FontAwesome. Setting via file (_variables.scss). Online builder.
 
+UniCSS (Universal Atomic CSS) предлагает сразу несколько готовых решений:
+===========
+
+* Простую и понятную методику именования CSS-классов.
+* Готовый для использования CSS-фреймворк с полноценной типографикой, адаптивным дизайном, normalize, FA-иконкам и всем тем, что должно входить в современный css-фреймворк 2018 года.
+* Полный исходный sass-код для того, чтобы вы легко могли настроить UniCSS под свою задачу.
+	
+* Онлайн-Builder с помощью которого можно проверить html-код прямо в браузере.
+
+См. http://unicss.maxsite.com.ua/
