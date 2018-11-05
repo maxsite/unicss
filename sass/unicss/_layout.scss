@@ -13,6 +13,10 @@
 	margin-right: auto;
 	margin-left: auto;
 	max-width: $layout_max_width;
+	
+	@if $layout_wrap_padding {
+		padding: $layout_wrap_padding;
+	}
 }
 
 // for layout_max_width_step_list

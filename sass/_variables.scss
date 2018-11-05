@@ -12,6 +12,9 @@ $layout_max_width_step_list: (
 	"tablet": 768px
 );
 
+// padding for .layout-center and .layout-wrap (or false)
+$layout_wrap_padding: 0 10px;
+
 // width max-width (.w70px .w300px-max .w50px-min)
 $width_list_px: 10, 16, 24, 30, 32, 48, 50, 64, 70, 100, 200, 250, 300, 320, 400, 480, 500, 600, 700, 768, 800, 900, 992;
 
