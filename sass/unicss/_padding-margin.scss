@@ -35,28 +35,17 @@
 	@include set_pm(margin, $var, mar);
 }
 
-// for @media resets
-@media #{$SCREEN_TABLET}  {
-	@include set_pm(padding, 0, pad, -tablet);
-	@include set_pm(margin, 0, mar, -tablet);
+
+// for @media
+@each $postfix, $m in $screen_media_mar_pad_step_list {
+	@media #{$m} {
+		@each $var in $margin_list_media {
+			@include set_pm(margin, $var, mar, -#{$postfix});
+		}
+		
+		@each $var in $padding_list_media {
+			@include set_pm(padding, $var, pad, -#{$postfix});
+		}
+	}
 }
 
-@media #{$SCREEN_PHONE}  {
-	@include set_pm(padding, 0, pad, -phone);
-	@include set_pm(margin, 0, mar, -phone);
-}
-
-@media #{$SCREEN_SMALL}  {
-	@include set_pm(padding, 0, pad, -small);
-	@include set_pm(margin, 0, mar, -small);
-}
-
-@media #{$SCREEN_MEDIUM}  {
-	@include set_pm(padding, 0, pad, -medium);
-	@include set_pm(margin, 0, mar, -medium);
-}
-
-@media #{$SCREEN_LARGE}  {
-	@include set_pm(padding, 0, pad, -large);
-	@include set_pm(margin, 0, mar, -large);
-}

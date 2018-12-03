@@ -30,6 +30,12 @@ $padding_list: 0, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 // margin px (.mar5 mar50-t .mar10-rl .mar20-tb)
 $margin_list: 0, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 
+// margin px for @media in $screen_media_mar_pad_step_list
+$margin_list_media: 0, 5, 10;
+
+// padding px for @media in $screen_media_mar_pad_step_list
+$padding_list_media: 0, 5, 10;
+
 // set padding and margin as !important
 $padding_margin_important: true;
 
@@ -104,7 +110,6 @@ $screen_media_width_step_list: (
 // .flex-wrap-tablet .flex-wrap-phone
 $screen_media_flex_step_list: (
 	"tablet": 		$SCREEN_TABLET, 
-	// "tablet-phone": $SCREEN_TABLET, 
 	"phone":  		$SCREEN_PHONE,
 );
 
@@ -114,6 +119,11 @@ $screen_media_text_step_list: (
 	"phone": 		$SCREEN_PHONE,
 );
 
+// .mar10-phone . pad0-phone
+$screen_media_mar_pad_step_list: (
+	// "tablet": 		$SCREEN_TABLET, 
+	"phone": 		$SCREEN_PHONE,
+);
 
 // colors (colors-gmd.scss and colors-gmd.html) 
 $colorLink: 		#002DB3;
