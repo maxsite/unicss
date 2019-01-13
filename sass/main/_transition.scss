@@ -2,6 +2,12 @@
 
 // Transition and animation
 
-.trans05-all { transition: all ease .5s; }
-.trans02-all { transition: all ease .2s; }
+.trans05-all, 
+.trans05-all a { 
+	transition: all ease .5s; 
+}
 
+.trans02-all, 
+.trans02-all a { 
+	transition: all ease .2s; 
+}
