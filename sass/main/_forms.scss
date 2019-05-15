@@ -123,6 +123,7 @@ button {
 	&:active, 
 	&:focus 
 	{
+		outline: none;
 	}
 	
 	&.disabled,
